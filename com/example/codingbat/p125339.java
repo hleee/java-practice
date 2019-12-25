@@ -9,9 +9,10 @@ lastDigit(3, 113) → true
 */
 
 public class p125339 {
-public boolean lastDigit(int a, int b) {
-    return Math.abs(a)%10 == Math.abs(b)%10;
-}
+    public boolean lastDigit(int a, int b) {
+        return Math.abs(a) % 10 == Math.abs(b) % 10;
+    }
+
     public static void main(String[] args) {
         p125339 p = new p125339();
         p.lastDigit(3, 1);
