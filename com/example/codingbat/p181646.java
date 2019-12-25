@@ -10,6 +10,7 @@ public class p181646 {
 
     public static void main(String[] args) {
         p181646 mt = new p181646();
-        mt.monkeyTrouble(true, false);
+        boolean result = mt.monkeyTrouble(true, false);
+        System.out.println(result);
     }
 }
