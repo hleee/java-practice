@@ -6,15 +6,16 @@ import java.io.IOException;
 
 public class FileIO {
 
-    public static void main(String[] args) {
-        BufferedReader reader;
+    public static void main(String[] args) throws IOException {
+        String fileName = "C:\\Users\\hlee\\Documents\\GitHub\\java-practice\\com\\example\\io\\input.txt";
         try {
-            reader = new BufferedReader(new FileReader(
-                    "C:\\Users\\hlee\\Documents\\GitHub\\java-practice\\com\\example\\io\\input.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+
             String line = reader.readLine();
             int lineNumber = 1;
             while (line != null) {
-                System.out.println("Name on Line #" + lineNumber + ": " + line);
+                String inputLine = String.format("Name on Line #%d: %s", lineNumber, line);
+                System.out.println(inputLine);
                 line = reader.readLine();
                 lineNumber++;
             }
